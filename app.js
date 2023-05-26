@@ -5,7 +5,7 @@ const csv = require("csv-parser");
 
 // Create a connection pool to manage database connections
 const pool = mysql.createPool({
-  host: "0.0.0.0",
+  host: "localhost",
   user: "soumya",
   password: "123456",
   database: "soumyaimdb3",
