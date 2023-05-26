@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie List</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Movie List</h1>
+    <table>
+      <tr>
+        <th>original_title</th>
+        <th>year</th>
+        <th>date_published</th>
+        <th>genre</th>
+        <th>duration</th>
+        <th>language</th>
+        <th>description</th>
+        <th>reviews_from_users</th>
+        <th>reviews_from_critics</th>
+      </tr>
+      <% movies.forEach((movie) => { %>
+      <tr>
+        <td><%= movie.original_title %></td>
+        <td><%= movie.year %></td>
+        <td><%= movie.date_published %></td>
+        <td><%= movie.genre %></td>
+        <td><%= movie.duration %></td>
+        <td><%= movie.language %></td>
+        <td><%= movie.description %></td>
+        <td><%= movie.reviews_from_users %></td>
+        <td><%= movie.reviews_from_critics %></td>
+      </tr>
+      <% }); %>
+    </table>
+  </body>
+</html>
